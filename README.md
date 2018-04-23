@@ -7,6 +7,12 @@ In this project I have defined two classes: Overlap and border
 border: could be a general class for borders of different shape
 
 Overlap: uses ORB feature detection to detect keypoints in two images and then finds a transform between them
+The picture below shows the matched feature points between two overlapped aerial images. Notice how a fixed landing gear of the drone has been ignored in the transform. This is a result of the inbuilt RANSAC method in CV::findHomography  
+
+![picture](data/matches.jpg)
+
+The code plots the border of the first image as a red rectangle inside the second image as below:
+![picture](data/image2_processed.jpg)
 
 ## Installation
 
