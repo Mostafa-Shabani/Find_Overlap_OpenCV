@@ -3,7 +3,8 @@
 <snippet>
   <content><![CDATA[
 # ${1:Find_Overlap_OpenCV}
-Finding a transform between two overlapped images Using OpenCV in C++ 
+
+##Finding a transform between two overlapped images Using OpenCV in C++ 
 
 In this project I have defined two classes: Overlap and border
 
