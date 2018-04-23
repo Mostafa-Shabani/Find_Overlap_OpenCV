@@ -5,7 +5,8 @@ Finding a transform between two overlapped images Using OpenCV in C++
 In this project I have defined two classes: Overlap and border
 
 border: could be a general class for borders of different shape
-
+        By using border::is_monotonic_angles() we can check that a polygon remains a polygon under the transform found.
+        
 Overlap: uses ORB feature detection to detect keypoints in two images and then finds a transform between them
 The picture below shows the matched feature points between two overlapped aerial images. Notice how a fixed landing gear of the drone has been ignored in the transform. This is a result of the inbuilt RANSAC method in CV::findHomography  
 
