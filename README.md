@@ -1,9 +1,4 @@
-# 
-
-<snippet>
-  <content><![CDATA[
-
-# ${1:Find_Overlap_OpenCV}
+# Find_Overlap_OpenCV
 
 Finding a transform between two overlapped images Using OpenCV in C++ 
 
@@ -41,6 +36,4 @@ Mostafa Shabani
 
 ## License
 This project is licensed under the MIT License 
-]]>
-</content>
-</snippet>
+
