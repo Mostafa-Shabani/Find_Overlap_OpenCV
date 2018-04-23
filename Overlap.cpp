@@ -61,7 +61,7 @@ void Overlap::Start()
 		 // perform feature detection to find a transform between the two images: 
 		 try
 		 {
-			 H=find_transform();
+			 H=find_transform(true, true, "./data/matches.jpg");
 		     v4c_pic_H=v4c_pic.transform(H);		 
 			 if(cv::Mat(H).total()== 0 || cv::Mat(H).data == NULL) 
 				{
@@ -142,7 +142,7 @@ cv::Matx33f Overlap::find_transform(bool if_draw_feature_matches, bool if_write_
 				cv::Scalar black(0,0,0);
 				cv::Mat img_matches;
 				
-				cv::drawMatches(img, img1_keypoints_s, img, img2_keypoints_s, Selected_matches, img_matches, black, white, std::vector<char> (), 0);//cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);	
+				cv::drawMatches(img, img1_keypoints_s, img2, img2_keypoints_s, Selected_matches, img_matches, black, white, std::vector<char> (), 0);//cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);	
 				
 				cv::namedWindow("img_matches", cv::WINDOW_NORMAL);
 				cv::imshow("img_matches",img_matches);

@@ -13,6 +13,7 @@ int main(int argc, const char *argv[])
     calc_overlap.Start();
     cv::imshow("image 1", img1);
     cv::imshow("image 2", img2);
+    cv::imwrite("./data/image2_processed.jpg", img2);
     cv::waitKey();
 
 }
